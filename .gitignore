@@ -1,0 +1,14 @@
+Makefile
+.qmake.stash
+obj
+moc
+rcc
+lib
+bin
+plugins
+fontconfig
+qvg
+*.swp
+qml-battleNet.pro.user
+*.o
+*.qmlc
