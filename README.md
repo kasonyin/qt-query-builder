@@ -45,3 +45,6 @@ qt-query-builder 是一个基于 qt 的简单的 sql 查询生成器
     qDebug() << sql;
     // UPDATE 
 ```
+
+## TODO
+- [ ] Delete
