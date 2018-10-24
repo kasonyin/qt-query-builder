@@ -1,11 +1,5 @@
 ﻿#include "insertmodel.h"
 
-InsertModel::InsertModel(const QString &column, const QVariant &value)
-{
-    _columns.append(column);
-    _values.append(this->toString(value));
-}
-
 InsertModel &InsertModel::operator()(const QString &column, const QVariant &value)
 {
     _columns.append(column);

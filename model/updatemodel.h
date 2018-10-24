@@ -6,9 +6,10 @@
 class UpdateModel : public SqlModel
 {
 public:
-    explicit UpdateModel(const QString &table_name);
+    explicit UpdateModel() {}
     virtual ~UpdateModel() {}
 
+    UpdateModel &table(const QString &table_name);
     UpdateModel &set(const QString &column, const QVariant &value);
     UpdateModel &operator() (const QString &column, const QVariant &value);
 

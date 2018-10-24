@@ -1,8 +1,9 @@
 ﻿#include "updatemodel.h"
 
-UpdateModel::UpdateModel(const QString &table_name)
+UpdateModel &UpdateModel::table(const QString &table_name)
 {
     _table_name = table_name;
+    return *this;
 }
 
 UpdateModel &UpdateModel::set(const QString &column, const QVariant &value)

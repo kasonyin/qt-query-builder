@@ -1,10 +1,5 @@
 ﻿#include "selectmodel.h"
 
-SelectModel::SelectModel(const QString &slect_columns)
-{
-    _select_column = slect_columns;
-}
-
 SelectModel &SelectModel::select(const QString &select_columns)
 {
     _select_column = select_columns;
