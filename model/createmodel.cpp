@@ -81,6 +81,7 @@ CreateModel &CreateModel::defaultIs(const QVariant &value)
 
 CreateModel &CreateModel::references(QString column_name)
 {
+    // TODO
     return *this;
 }
 
