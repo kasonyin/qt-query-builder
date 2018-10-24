@@ -7,7 +7,6 @@ class InsertModel : public SqlModel
 {
 public:
     explicit InsertModel() {}
-    explicit InsertModel(const QString &column, const QVariant &value);
     virtual ~InsertModel() {}
 
     InsertModel &operator() (const QString &column, const QVariant &value);

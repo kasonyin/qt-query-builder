@@ -20,7 +20,8 @@ SOURCES += \
     model/insertmodel.cpp \
     model/querybuilder.cpp \
     model/selectmodel.cpp \
-    model/updatemodel.cpp
+    model/updatemodel.cpp \
+    model/createmodel.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -32,4 +33,5 @@ HEADERS += \
     model/querybuilder.h \
     model/selectmodel.h \
     model/sqlmodel.h \
-    model/updatemodel.h
+    model/updatemodel.h \
+    model/createmodel.h

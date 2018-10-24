@@ -1,15 +1,15 @@
-#include "updatemodel.h"
+﻿#include "updatemodel.h"
 
-UpdateModel::UpdateModel(const QString &table_name)
+UpdateModel &UpdateModel::table(const QString &table_name)
 {
     _table_name = table_name;
+    return *this;
 }
 
 UpdateModel &UpdateModel::set(const QString &column, const QVariant &value)
 {
     _columns.append(column);
-    // TODO
-    _values.append(value.toString());
+    _values.append(this->toString(value));
     return *this;
 }
 
@@ -36,7 +36,7 @@ UpdateModel &UpdateModel::where(const QString &column, const QString &condition)
 UpdateModel &UpdateModel::where(const QString &column, const QString &condition, const QVariant &value)
 {
     QString where_cond;
-    where_cond.append(column).append(condition).append("'").append(value.toString()).append("'");
+    where_cond.append(column).append(condition).append(this->toString(value));
     _where_conditions.append(where_cond);
     return *this;
 }

@@ -1,26 +1,35 @@
 ﻿#ifndef QUERYBUILDER_H
 #define QUERYBUILDER_H
 
-#include <QString>
-#include <QVariant>
-
 #include "sqlmodel.h"
-#include "selectmodel.h"
+#include "createmodel.h"
 #include "insertmodel.h"
+#include "selectmodel.h"
 #include "updatemodel.h"
 
 class QueryBuilder
 {
 public:
+    enum Type {
+        Create,
+        Insert,
+        Select,
+        Update,
+        Delete
+    };
     explicit QueryBuilder();
     ~QueryBuilder();
 
-    SelectModel &select(QString columns);
+    CreateModel &create(const QString &table_name);
+    SelectModel &select(const QString &columns);
 
     InsertModel &insert(const QVector<QVariant> &values);
     InsertModel &insert(const QString &column, const QVariant &value);
 
     UpdateModel &update(const QString &table_name);
+
+private:
+    SqlModel *getModel(QueryBuilder::Type type);
 
 private:
     SqlModel *_model = nullptr;
