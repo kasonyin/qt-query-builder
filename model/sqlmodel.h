@@ -10,8 +10,9 @@ class SqlModel
 public:
     SqlModel(){}
     virtual ~SqlModel(){}
-//    virtual QString get() = 0;
     virtual QString build() = 0;
+    // TODO
+//    virtual QString get() = 0;
 
 protected:
     QString toString(const QVariant &value)

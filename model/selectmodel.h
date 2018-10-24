@@ -5,7 +5,7 @@
 class SelectModel : public SqlModel
 {
 public:
-    SelectModel() {}
+    explicit SelectModel() {}
     virtual ~SelectModel() {}
 
     SelectModel &select(const QString &select_columns = "*");
