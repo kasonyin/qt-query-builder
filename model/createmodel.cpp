@@ -53,6 +53,14 @@ CreateModel &CreateModel::string(const QString &column_name, quint32 length)
     return *this;
 }
 
+CreateModel &CreateModel::real(const QString &column_name)
+{
+    QString column;
+    column.append(column_name).append(" REAL ");
+    _columns.append(column);
+    return *this;
+}
+
 CreateModel &CreateModel::primary()
 {
     QString &str = _columns.last();

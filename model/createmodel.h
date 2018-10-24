@@ -6,9 +6,8 @@
 class CreateModel : public SqlModel
 {
 public:
-
     explicit CreateModel();
-    ~CreateModel() {}
+    virtual ~CreateModel() {}
 
     CreateModel &create(const QString &table_name);
     CreateModel &notExist();
@@ -16,6 +15,7 @@ public:
     CreateModel &increments(const QString &column_name);
     CreateModel &integer(const QString &column_name, quint32 length = 0);
     CreateModel &string(const QString &column_name, quint32 length = 0);
+    CreateModel &real(const QString &column_name);
 
     CreateModel &primary();
     CreateModel &notNull();

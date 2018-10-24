@@ -7,6 +7,10 @@
 #include "selectmodel.h"
 #include "updatemodel.h"
 
+/*********************************************
+ * 这里不用前置声明，是为了在使用时不需要引用
+ * 太多文件，直接引用 querybuilder.h 就可以
+ ********************************************/
 class QueryBuilder
 {
 public:

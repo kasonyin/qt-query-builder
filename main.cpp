@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
     sql = qb.create("students")
             .increments("id").primary()
             .integer("age").notNull()
-            .integer("score").defaultIs(0)
+            .real("score").defaultIs(0.0)
             .string("name").defaultIs("NULL")
             .build();
     qDebug() << sql;
