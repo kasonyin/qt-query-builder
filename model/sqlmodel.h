@@ -19,9 +19,13 @@ protected:
     {
         QString v;
         if (QVariant::String == value.type()) {
-            v.append("'");
-            v.append(value.toString());
-            v.append("'");
+            if (value.toString() != "NULL") {
+                v.append("'");
+                v.append(value.toString());
+                v.append("'");
+            } else {
+                v.append(value.toString());
+            }
         } else {
             v = value.toString();
         }

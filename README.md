@@ -21,7 +21,7 @@ qt-query-builder 是一个基于 qt 的简单的 sql 查询生成器
     // id INTEGER PRIMARY KEY AUTOINCREMENT,
     // age INTEGER  NOT NULL,
     // score REAL  DEFAULT 0,
-    // name TEXT  DEFAULT 'NULL')
+    // name TEXT  DEFAULT NULL)
 ```
 
 ### Select
