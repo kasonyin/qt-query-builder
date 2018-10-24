@@ -6,7 +6,7 @@
 #include "insertmodel.h"
 #include "selectmodel.h"
 #include "updatemodel.h"
-
+#include "deletemodel.h"
 /*********************************************
  * 这里不用前置声明，是为了在使用时不需要引用
  * 太多文件，直接引用 querybuilder.h 就可以
@@ -31,7 +31,7 @@ public:
     InsertModel &insert(const QString &column, const QVariant &value);
 
     UpdateModel &update(const QString &table_name);
-
+    DeleteModel &delete_();
 private:
     SqlModel *getModel(QueryBuilder::Type type);
 

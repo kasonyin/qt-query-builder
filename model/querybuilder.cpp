@@ -46,6 +46,12 @@ UpdateModel &QueryBuilder::update(const QString &table_name)
     return *dynamic_cast<UpdateModel *>(_model);
 }
 
+DeleteModel &QueryBuilder::delete_()
+{
+    this->getModel(Delete);
+    return *dynamic_cast<DeleteModel *>(_model);
+}
+
 SqlModel *QueryBuilder::getModel(QueryBuilder::Type type)
 {
     if (_model != nullptr)
@@ -56,6 +62,7 @@ SqlModel *QueryBuilder::getModel(QueryBuilder::Type type)
     case Insert: _model = new InsertModel;  break;
     case Select: _model = new SelectModel;  break;
     case Update: _model = new UpdateModel;  break;
+    case Delete: _model = new DeleteModel;  break;
     default: break;
     }
 
