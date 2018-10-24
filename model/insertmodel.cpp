@@ -3,22 +3,20 @@
 InsertModel::InsertModel(const QString &column, const QVariant &value)
 {
     _columns.append(column);
-    // TODO
-    _values.append(value.toString());
+    _values.append(this->toString(value));
 }
 
 InsertModel &InsertModel::operator()(const QString &column, const QVariant &value)
 {
     _columns.append(column);
-    // TODO
-    _values.append(value.toString());
+    _values.append(this->toString(value));
     return *this;
 }
 
 InsertModel &InsertModel::operator()(const QVector<QVariant> &values)
 {
     for (int i = 0; i < values.size(); i++) {
-        _values.append(values.at(i).toString());
+        _values.append(this->toString(values.at(i)));
     }
 
     return *this;

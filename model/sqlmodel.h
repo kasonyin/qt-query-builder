@@ -14,10 +14,19 @@ public:
     virtual QString build() = 0;
 
 protected:
-//    QString to_value(const QVariant &value)
-//    {
-//        bool ok = false;
-//    }
+    QString toString(const QVariant &value)
+    {
+        QString v;
+        if (QVariant::String == value.type()) {
+            v.append("'");
+            v.append(value.toString());
+            v.append("'");
+        } else {
+            v = value.toString();
+        }
+
+        return v;
+    }
 
 protected:
     QString _sql;

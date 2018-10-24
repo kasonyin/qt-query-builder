@@ -1,4 +1,4 @@
-#ifndef UPDATEMODEL_H
+﻿#ifndef UPDATEMODEL_H
 #define UPDATEMODEL_H
 
 #include "sqlmodel.h"

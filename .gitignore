@@ -9,6 +9,6 @@ plugins
 fontconfig
 qvg
 *.swp
-qml-battleNet.pro.user
+*.pro.user
 *.o
 *.qmlc

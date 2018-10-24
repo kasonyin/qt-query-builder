@@ -34,7 +34,7 @@ SelectModel &SelectModel::where(const QString &column, const QString &condition)
 SelectModel &SelectModel::where(const QString &column, const QString &condition, const QVariant &value)
 {
     QString where_cond;
-    where_cond.append(column).append(condition).append("'").append(value.toString()).append("'");
+    where_cond.append(column).append(condition).append(this->toString(value));
     _where_conditions.append(where_cond);
     return *this;
 }
