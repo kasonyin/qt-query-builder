@@ -13,7 +13,7 @@ CreateModel &CreateModel::create(const QString &table_name)
 
 CreateModel &CreateModel::notExist()
 {
-    _not_exist = QString("IF NOT EXIST ");
+    _not_exist = QString("IF NOT EXISTS ");
     return *this;
 }
 
